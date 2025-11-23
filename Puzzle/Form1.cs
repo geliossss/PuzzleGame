@@ -2,6 +2,7 @@
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Media;
 using System.Windows.Forms;
 
 namespace Puzzle
@@ -21,10 +22,35 @@ namespace Puzzle
 
         public int UserID { get; private set; }
 
+        private SoundPlayer clickSound;
+        private SoundPlayer startSound;
+        private SoundPlayer errorSound;
+        private SoundPlayer selectSound;
+
         public PuzzleForm()
         {
             InitializeComponent();
             InitializeMainMenu();
+            LoadSounds(); 
+        }
+
+        private void LoadSounds()
+        {
+            string soundFolder = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "..", "..", "..", "Puzzle", "Assets", "Sounds");
+
+            clickSound = new SoundPlayer(Path.Combine(soundFolder, "click.wav"));
+            startSound = new SoundPlayer(Path.Combine(soundFolder, "start.wav"));
+            errorSound = new SoundPlayer(Path.Combine(soundFolder, "error.wav"));
+            selectSound = new SoundPlayer(Path.Combine(soundFolder, "select.wav"));
+
+            try
+            {
+                clickSound.LoadAsync();
+                startSound.LoadAsync();
+                errorSound.LoadAsync();
+                selectSound.LoadAsync();
+            }
+            catch { }
         }
 
         private void InitializeMainMenu()
@@ -77,7 +103,6 @@ namespace Puzzle
             difficultyPanel.Controls.Add(difficultyLabel);
             difficultyPanel.Controls.Add(difficultyComboBox);
 
-            // Кнопка начала игры
             startGameBtn = new Button
             {
                 Text = "Начать игру",
@@ -89,7 +114,6 @@ namespace Puzzle
             };
             startGameBtn.Click += StartGameBtn_Click;
 
-            // Кнопка таблицы рекордов
             recordsBtn = new Button
             {
                 Text = "Таблица рекордов",
@@ -101,7 +125,6 @@ namespace Puzzle
             };
             recordsBtn.Click += RecordsBtn_Click;
 
-            // Панель с изображениями
             imagesFlowPanel = new FlowLayoutPanel
             {
                 Dock = DockStyle.Fill,
@@ -112,7 +135,6 @@ namespace Puzzle
 
             LoadImagesToPanel();
 
-            // Добавляем элементы на форму
             this.Controls.Add(imagesFlowPanel);
             this.Controls.Add(startGameBtn);
             this.Controls.Add(recordsBtn);
@@ -253,14 +275,17 @@ namespace Puzzle
                     PuzzleID = GetPuzzleIDByTitle(puzzleTitle),
                     Title = puzzleTitle
                 };
+
+                selectSound?.Play();
+
             }
             catch (Exception ex)
             {
                 MessageBox.Show($"Ошибка загрузки изображения: {ex.Message}");
+                errorSound?.Play();
             }
         }
 
-        // Метод получения PuzzleID из базы по названию
         private int GetPuzzleIDByTitle(string title)
         {
             int id = 0;
@@ -287,8 +312,11 @@ namespace Puzzle
 
         private void StartGameBtn_Click(object sender, EventArgs e)
         {
+            clickSound?.Play();
+
             if (selectedImage == null)
             {
+                errorSound?.Play();
                 MessageBox.Show("Пожалуйста, выберите изображение для пазла!", "Внимание",
                     MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
@@ -296,6 +324,7 @@ namespace Puzzle
 
             if (selectedPuzzle == null || selectedPuzzle.PuzzleID == 0)
             {
+                errorSound?.Play();
                 MessageBox.Show("Пазл не найден в базе данных!", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
@@ -304,8 +333,10 @@ namespace Puzzle
             {
                 if (loginForm.ShowDialog() == DialogResult.OK)
                 {
-                    string username = loginForm.Username;  
-                    int userID = loginForm.UserID;         
+                    string username = loginForm.Username;
+                    int userID = loginForm.UserID;
+
+                    startSound?.Play();
 
                     var gameForm = new GameForm(selectedImage, gridSize, username, userID, selectedPuzzle.PuzzleID, selectedPuzzle.Title);
                     gameForm.Show();
@@ -315,11 +346,12 @@ namespace Puzzle
 
         private void RecordsBtn_Click(object sender, EventArgs e)
         {
+            clickSound?.Play();
+
             var tableRecordsForm = new TableRecords();
             tableRecordsForm.ShowDialog();
         }
 
-        // Вспомогательный класс для хранения выбранного пазла
         private class PuzzleItem
         {
             public int PuzzleID { get; set; }
