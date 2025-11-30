@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.IO;
 using System.Linq;
+using System.Media;
 
 namespace Puzzle
 {
@@ -24,6 +26,9 @@ namespace Puzzle
         public int Rows => rows;
         public List<PuzzlePiece> Pieces => pieces;
 
+        private SoundPlayer clickSound;
+        private SoundPlayer bgMusic;
+
         public PuzzleGame(Image image, int gridSize)
         {
             this.gridSize = gridSize;
@@ -33,6 +38,27 @@ namespace Puzzle
 
             InitializePuzzle();
             ShufflePieces();
+            LoadSound();
+        }
+
+        private void LoadSound()
+        {
+            string soundFolder = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "..", "..", "..", "Puzzle", "Assets", "Sounds");
+
+            bgMusic = new SoundPlayer(Path.Combine(soundFolder, "puzzle.wav"));
+            try { bgMusic.LoadAsync(); } catch { }
+        }
+
+        public void StartMusic()
+        {
+            try { bgMusic?.PlayLooping(); }
+            catch { }
+        }
+
+        public void StopMusic()
+        {
+            try { bgMusic?.Stop(); }
+            catch { }
         }
 
         private void InitializePuzzle()

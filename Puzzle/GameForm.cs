@@ -122,6 +122,7 @@ namespace Puzzle
             if (puzzleImage != null)
             {
                 game = new PuzzleGame(puzzleImage, gridSize);
+                game.StartMusic();
                 gameTimer.Start();
                 UpdateStatsLabels();
                 this.Invalidate();
@@ -142,9 +143,10 @@ namespace Puzzle
             if (game.IsCompleted)
             {
                 gameTimer.Stop();
+                game.StopMusic();
+
                 TimeSpan timeTaken = DateTime.Now - gameStartTime;
 
-                // Подсчёт очков с учётом сложности
                 int baseScore;
                 switch (difficultyText)
                 {
@@ -233,6 +235,7 @@ namespace Puzzle
         protected override void OnFormClosed(FormClosedEventArgs e)
         {
             gameTimer?.Stop();
+            game?.StopMusic();
             puzzleImage?.Dispose();
             base.OnFormClosed(e);
         }
