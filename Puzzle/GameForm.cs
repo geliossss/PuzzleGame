@@ -2,6 +2,8 @@
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Media;
+using System.IO;
 using System.Windows.Forms;
 
 namespace Puzzle
@@ -158,6 +160,15 @@ namespace Puzzle
 
                 score = Math.Max(0, baseScore - (int)timeTaken.TotalSeconds - moveCount * 10);
                 UpdateStatsLabels();
+
+                string soundFolder = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "..", "..", "..", "Puzzle", "Assets", "Sounds");
+                string winSoundPath = Path.Combine(soundFolder, "win.wav");
+
+                if (File.Exists(winSoundPath))
+                {
+                    SoundPlayer player = new SoundPlayer(winSoundPath);
+                    player.Play();
+                }
 
                 MessageBox.Show($"Пазл собран!\nСложность: {difficultyText}\nВремя: {timeTaken.TotalSeconds:F1} сек\nХоды: {moveCount}\nОчки: {score}");
 
