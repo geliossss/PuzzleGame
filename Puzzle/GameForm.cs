@@ -158,7 +158,7 @@ namespace Puzzle
                     default: baseScore = 1000; break;
                 }
 
-                score = Math.Max(0, baseScore - (int)timeTaken.TotalSeconds - moveCount * 10);
+                score = Math.Max(0, baseScore - (int)Math.Round(timeTaken.TotalSeconds) - moveCount * 10);
                 UpdateStatsLabels();
 
                 string soundFolder = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "..", "..", "..", "Puzzle", "Assets", "Sounds");
@@ -266,7 +266,7 @@ namespace Puzzle
                         cmd.Parameters.AddWithValue("@UserID", currentUserID);
                         cmd.Parameters.AddWithValue("@PuzzleID", puzzleID);
                         cmd.Parameters.AddWithValue("@Score", score);
-                        cmd.Parameters.AddWithValue("@TimeSpent", (int)timeTaken.TotalSeconds);
+                        cmd.Parameters.AddWithValue("@TimeSpent", (int)Math.Round(timeTaken.TotalSeconds));
                         cmd.Parameters.AddWithValue("@MovesCount", moves);
                         cmd.Parameters.AddWithValue("@DifficultyLevel", difficultyText);
 

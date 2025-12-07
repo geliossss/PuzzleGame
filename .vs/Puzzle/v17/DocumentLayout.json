@@ -3,8 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\admin\\Documents\\GitHub\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430\\PuzzleGame\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0EDC7927-8CCD-4E45-A013-DB923E170754}|Puzzle\\Puzzle.csproj|c:\\users\\admin\\documents\\github\\\u043D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430\\puzzlegame\\puzzle\\gameform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0EDC7927-8CCD-4E45-A013-DB923E170754}|Puzzle\\Puzzle.csproj|C:\\Users\\admin\\Documents\\GitHub\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430\\PuzzleGame\\puzzle\\gameform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0EDC7927-8CCD-4E45-A013-DB923E170754}|Puzzle\\Puzzle.csproj|solutionrelative:puzzle\\gameform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0EDC7927-8CCD-4E45-A013-DB923E170754}|Puzzle\\Puzzle.csproj|C:\\Users\\admin\\Documents\\GitHub\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430\\PuzzleGame\\puzzle\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0EDC7927-8CCD-4E45-A013-DB923E170754}|Puzzle\\Puzzle.csproj|solutionrelative:puzzle\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0EDC7927-8CCD-4E45-A013-DB923E170754}|Puzzle\\Puzzle.csproj|c:\\users\\admin\\documents\\github\\\u043D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430\\puzzlegame\\puzzle\\tablerecords.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0EDC7927-8CCD-4E45-A013-DB923E170754}|Puzzle\\Puzzle.csproj|solutionrelative:puzzle\\tablerecords.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0EDC7927-8CCD-4E45-A013-DB923E170754}|Puzzle\\Puzzle.csproj|C:\\Users\\admin\\Documents\\GitHub\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430\\PuzzleGame\\puzzle\\puzzlegame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -13,14 +21,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{0EDC7927-8CCD-4E45-A013-DB923E170754}|Puzzle\\Puzzle.csproj|C:\\Users\\admin\\Documents\\GitHub\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430\\PuzzleGame\\puzzle\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0EDC7927-8CCD-4E45-A013-DB923E170754}|Puzzle\\Puzzle.csproj|solutionrelative:puzzle\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0EDC7927-8CCD-4E45-A013-DB923E170754}|Puzzle\\Puzzle.csproj|C:\\Users\\admin\\Documents\\GitHub\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430\\PuzzleGame\\puzzle\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0EDC7927-8CCD-4E45-A013-DB923E170754}|Puzzle\\Puzzle.csproj|solutionrelative:puzzle\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0EDC7927-8CCD-4E45-A013-DB923E170754}|Puzzle\\Puzzle.csproj|C:\\Users\\admin\\Documents\\GitHub\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430\\PuzzleGame\\puzzle\\tablerecords.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0EDC7927-8CCD-4E45-A013-DB923E170754}|Puzzle\\Puzzle.csproj|solutionrelative:puzzle\\tablerecords.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,13 +34,13 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "Form1.cs",
               "DocumentMoniker": "C:\\Users\\admin\\Documents\\GitHub\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430\\PuzzleGame\\Puzzle\\Form1.cs",
               "RelativeDocumentMoniker": "Puzzle\\Form1.cs",
               "ToolTip": "C:\\Users\\admin\\Documents\\GitHub\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430\\PuzzleGame\\Puzzle\\Form1.cs",
               "RelativeToolTip": "Puzzle\\Form1.cs",
-              "ViewState": "AgIAABcAAAAAAAAAAAAAAB8AAAAiAAAAAAAAAA==",
+              "ViewState": "AgIAAEQBAAAAAAAAAAAAAC0AAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-20T06:32:01.728Z",
               "IsPinned": true
@@ -79,16 +79,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "PuzzleGame.cs",
               "DocumentMoniker": "C:\\Users\\admin\\Documents\\GitHub\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430\\PuzzleGame\\Puzzle\\PuzzleGame.cs",
               "RelativeDocumentMoniker": "Puzzle\\PuzzleGame.cs",
               "ToolTip": "C:\\Users\\admin\\Documents\\GitHub\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430\\PuzzleGame\\Puzzle\\PuzzleGame.cs",
               "RelativeToolTip": "Puzzle\\PuzzleGame.cs",
-              "ViewState": "AgIAACcAAAAAAAAAAAAAADUAAAArAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADMAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-30T14:39:41.472Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-30T14:39:41.472Z"
             },
             {
               "$type": "Document",
@@ -98,34 +97,36 @@
               "RelativeDocumentMoniker": "Puzzle\\GameForm.cs",
               "ToolTip": "C:\\Users\\admin\\Documents\\GitHub\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430\\PuzzleGame\\Puzzle\\GameForm.cs",
               "RelativeToolTip": "Puzzle\\GameForm.cs",
-              "ViewState": "AgIAAJAAAAAAAAAAAAAAAKoAAAARAAAAAAAAAA==",
+              "ViewState": "AgIAAPAAAAAAAAAAAAAwwA0BAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-09T13:36:56.238Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "LoginForm.cs",
               "DocumentMoniker": "C:\\Users\\admin\\Documents\\GitHub\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430\\PuzzleGame\\Puzzle\\LoginForm.cs",
               "RelativeDocumentMoniker": "Puzzle\\LoginForm.cs",
               "ToolTip": "C:\\Users\\admin\\Documents\\GitHub\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430\\PuzzleGame\\Puzzle\\LoginForm.cs",
               "RelativeToolTip": "Puzzle\\LoginForm.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAI0AAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAG4AAABWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-09T13:43:12.546Z"
+              "WhenOpened": "2025-11-09T13:43:12.546Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
               "Title": "TableRecords.cs",
               "DocumentMoniker": "C:\\Users\\admin\\Documents\\GitHub\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430\\PuzzleGame\\Puzzle\\TableRecords.cs",
               "RelativeDocumentMoniker": "Puzzle\\TableRecords.cs",
               "ToolTip": "C:\\Users\\admin\\Documents\\GitHub\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430\\PuzzleGame\\Puzzle\\TableRecords.cs",
               "RelativeToolTip": "Puzzle\\TableRecords.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAiAAAAAAAAAA==",
+              "ViewState": "AgIAACwAAAAAAAAAAAAAADUAAABUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-09T11:54:02.67Z"
+              "WhenOpened": "2025-11-09T11:54:02.67Z",
+              "EditorCaption": ""
             }
           ]
         }
